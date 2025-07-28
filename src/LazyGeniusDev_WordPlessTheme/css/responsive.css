@@ -1,0 +1,112 @@
+@media (max-width: 768px) {
+  .container{
+    padding: 0;
+  }
+  .site-header{
+    padding: 0.5rem 2rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .site-nav {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    height: 100vh;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    padding: 1rem 2rem;
+    border-top: 1px solid #2b2f33;
+    pointer-events: none; /* クリックも無効にする */
+  }
+  .site-nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero {
+    height: 80vh; /* 高さ少し緩めてもOK */
+    padding-top: 100px;
+  }
+  .hero-content h1 {
+    font-size: 1.25rem;
+    padding: 0 1rem; /* スマホでの余白調整 */
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .btn-primary {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  .about-section .about-content {
+    padding-left: 0;
+  }
+
+  /* 見積もりシミュレーター */
+  .price-section table,
+  .price-section thead,
+  .price-section tbody,
+  .price-section th,
+  .price-section td,
+  .price-section tr {
+      display: block;
+  }
+
+  .price-section tr {
+      margin-bottom: 1.5rem;
+  }
+
+  .price-section th {
+      background-color: transparent;
+      font-weight: bold;
+  }
+
+  .price-section td {
+      padding-left: 50%;
+      position: relative;
+  }
+
+  .price-section td::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 45%;
+      padding-left: 0.5rem;
+      white-space: nowrap;
+      font-weight: bold;
+      color: var(--color-muted);
+      content: attr(data-label);
+  }
+
+  .price-estimate {
+      padding: 0.5rem;
+  }
+
+  .card-grid {
+      grid-template-columns: 1fr;
+  }
+}

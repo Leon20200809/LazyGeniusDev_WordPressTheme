@@ -1,0 +1,23 @@
+/* サイトのフォント・色を設定 */
+
+:root {
+  --font-heading: "Noto Sans JP", sans-serif; /* 見出しフォント　*/
+  --font-body: "Noto Sans JP", sans-serif; /* メインフォント　*/
+
+  --color-bg:  #0e0f11; /* メイン背景　*/
+  --color-bg-alt: #1a1c1f; /* サブ背景 */
+  --color-text: #e0f8f8; /* メイン文字 */
+  --color-accent: #55d1c9; /* アクセント */
+  --color-accent-hover: #3dbbb3; /* ホバー */
+  --color-muted: #aaa; /* 補足文字 */
+  --color-border: #2b2f33; /* 境界線 */
+
+  --btn-primary: #55d1c9; /* ボタン */
+  --btn-secondary: #ced4da; /* サブボタン */
+  --btn-bg: #ffffff; /* ボタン背景 */
+}
+
+/* 裏技伝授 */
+/* rootの中身をコピーしてＡＩに
+「○○っぽい感じ、○○のページに適した数値ちょうだい！」
+ってお願いすると・・・ */

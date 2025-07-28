@@ -1,0 +1,679 @@
+@import url('variables.css');
+/* ページごとorセクションごとの設定 */
+
+/* ヘッダー */
+.site-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: #1a1c1f;
+  padding: 1rem 2rem;
+}
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header h1 {
+  font-size: 1.5rem;
+  color: #55d1c9;
+}
+
+.site-header .logo {
+  width: 180px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 93px 10px #302f2f;
+  border-radius: 5px;
+}
+.site-header .logo img {
+  width: 100%0;
+  height: 100%;
+  object-fit: contain;
+}
+
+.site-header .site-nav a {
+  margin-left: 1.5rem;
+  color: #e0f8f8;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.site-header .site-nav a:hover {
+  color: #55d1c9;
+}
+.site-header .site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* フッター */
+.site-footer {
+  background-color: #1a1c1f;
+  padding: 2rem 0;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid #2b2f33;
+}
+
+/* ヒーロー */
+.hero {
+  position: relative;
+  background: url("../images/hero-bg.png") center center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 50px;
+  /* オーバーレイ */
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* ←暗めの黒＋透過 */
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px); /* ←背景を軽くぼかす */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero-content h1 {
+  font-size: 2.25rem;
+  color: #55d1c9;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 10rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+/* アバウト */
+.about-section {
+  background-color: #1a1c1f;
+  text-align: center;
+}
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #55d1c9;
+}
+.about-section .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  padding-left: 13%;
+  margin-bottom: 5rem;
+}
+.about-section .about-content img {
+  width: 250px;
+  border-radius: 50%;
+  border: 2px solid #2b2f33;
+}
+.about-section .about-content .about-text {
+  flex: 1;
+  color: #e0f8f8;
+  line-height: 1.7;
+  transition: color 0.3s;
+  text-align: left;
+  padding: 0 2rem;
+}
+.about-section .about-content .about-text .my-data {
+  display: grid;
+  grid-template-columns: 1fr 4fr; /* 左カラム:右カラムの比率 */
+  gap: 0.5rem 1rem; /* 行と列の間隔 */
+  margin-bottom: 3rem;
+}
+.about-section .about-content .about-text a:hover {
+  color: #55d1c9;
+}
+.about-section .google-ana {
+  text-align: center;
+  margin: 5rem 0;
+}
+.about-section .google-ana a {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(0.7); /* 70%の明るさ = 少し暗くなる */
+  transition: filter 0.3s ease;
+}
+.about-section .google-ana a:hover {
+  filter: brightness(1); /* 70%の明るさ = 少し暗くなる */
+  transition: filter 0.3s ease;
+}
+.about-section .google-ana img {
+  max-width: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* 70%の明るさ = 少し暗くなる */
+  transition: filter 0.3s ease;
+  box-shadow: 0px 0px 100px 4px #53d0c8;
+  border-radius: 5px;
+}
+
+/* スキルズ */
+.skills-section {
+  background-color: #0e0f11;
+}
+.skills-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #55d1c9;
+}
+.skills-section .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  text-align: center;
+}
+.skills-section .skills-grid .skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.skills-section .skills-grid .skill-item img {
+  width: 50px;
+  height: 50px;
+  transition: filter 0.3s;
+  filter: drop-shadow(0 0 5px #21759B);
+}
+.skills-section .skills-grid .skill-item span {
+  color: #e0f8f8;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* ワークス */
+.works-section {
+  background-color: #1a1c1f;
+}
+.works-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #55d1c9;
+}
+.works-section .works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.works-section .works-grid .work-card {
+  padding: 1rem;
+  background-color: #0e0f11;
+  border: 1px solid #2b2f33;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.works-section .works-grid .work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.works-section .works-grid .work-card img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  padding: 0.2rem;
+  border-radius: 8px;
+}
+.works-section .works-grid .work-card .work-info {
+  padding: 1rem;
+}
+.works-section .works-grid .work-card .work-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #55d1c9;
+}
+.works-section .works-grid .work-card .work-info p {
+  font-size: 0.95rem;
+  color: #e0f8f8;
+}
+
+/* コンタクト */
+.contact-section {
+  background-color: #0e0f11;
+}
+.contact-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #55d1c9;
+}
+.contact-section .contact-form {
+  max-width: 600px;
+  background-color: var(--color-bg-alt);
+  border-radius: 8px;
+  padding: 3rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* ラジオボタンだけは別枠にする */
+}
+.contact-section .contact-form label{
+  color: var(--color-text);
+}
+
+.contact-section .contact-form input,
+.contact-section .contact-form textarea {
+  padding: 0.75rem 1rem;
+  background-color: #0e0f11;
+  color: #e0f8f8;
+  border: 1px solid #2b2f33;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+.contact-section .contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.contact-section .contact-form input[type=radio] {
+  width: auto;
+}
+.contact-section .contact-form button {
+  background-color: var(--color-accent);
+  color: #0e0f11;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.contact-section .contact-form button:hover {
+  background-color: var(--color-accent-hover);
+  transform: scale(1.05);
+}
+.contact-section .contact-form .contact-label {
+  font-weight: bold;
+  color: #e0f8f8;
+}
+.contact-section .contact-form .radio-group {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.contact-section .contact-form .radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0e0f11;
+  border: 1px solid #2b2f33;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.contact-section .contact-form .radio-option:hover {
+  background-color: #1a1c1f;
+  border-color: #55d1c9;
+}
+.contact-section .contact-form .radio-option input[type=radio] {
+  accent-color: #55d1c9; /* チェック色（モダンブラウザ対応） */
+  transform: scale(1.2); /* 少し大きくして視認性アップ */
+}
+
+.tokushoho{
+  display: block;
+  text-align: center;
+  margin-top: 3rem;
+  transition: color 0.3s;
+}
+.tokushoho:hover{
+  color: #55d1c9;;
+}
+
+/* ▼ 価格表エリア全体 */
+.price-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: var(--color-bg);
+}
+
+/* 見積もりシミュレーター用 */
+.price-estimate{
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* ▼ 見出し */
+.price-section h1,
+.price-section h2 {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+/* ▼ 表 */
+.price-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.price-section th,
+.price-section td {
+    border: 1px solid var(--color-border);
+    padding: 1rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.price-section th {
+    background-color: var(--color-bg-alt);
+    font-weight: bold;
+}
+
+/* ▼ リスト */
+.price-section ul {
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+}
+
+/* ▼ CTA */
+.cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: var(--font-heading);
+}
+
+.cta a:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.recommended{
+    display: inline-block;
+    margin: 0 0.5rem;
+    color: red;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+/* ▼ フィールドセット（カテゴリ枠） */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.card-option {
+    padding: 1rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card-option:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 8px rgba(85, 209, 201, 0.2);
+}
+
+.card-option input[type="checkbox"] {
+    margin-top: 0.4rem;
+    accent-color: var(--color-accent);
+    transform: scale(1.2);
+}
+
+.card-title {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+}
+
+.card-option--vertical:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 10px rgba(85, 209, 201, 0.2);
+}
+
+.card-option--vertical input[type="checkbox"] {
+    appearance: none;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: #fff;
+    border: 2px solid var(--color-accent);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.card-option--vertical input[type="checkbox"]:checked {
+    background-color: var(--color-accent);
+}
+
+.card-option--vertical input[type="checkbox"]::before {
+    content: "✔";
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4rem;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.card-option--vertical input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+
+.checkbox-top {
+    margin-bottom: 1rem;
+}
+
+.card-content {
+    color: var(--color-text);
+    font-family: var(--font-body);
+    width: 100%;
+    min-width: 0;
+    text-align: left;
+    word-break: break-word;
+}
+
+.card-title {
+    font-size: 1.05rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.card-desc {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card-example {
+    font-size: 1rem;
+    color: var(--color-accent);
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
+.card-price {
+    display: block;
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--color-accent);
+}
+
+
+.price-estimate fieldset {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--color-bg);
+}
+
+.price-estimate legend {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    color: var(--color-accent);
+}
+
+/* ▼ 金額表示 */
+.total-price {
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 1.5rem;
+    color: var(--color-text);
+}
+
+/* ▼ 選択項目のリスト */
+.estimate-summary {
+    background-color: var(--color-bg);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    height: 400px;
+}
+
+.estimate-summary p {
+    margin-bottom: 1rem;
+}
+
+.estimate-summary ul {
+    margin: 0 0 1.5rem 4.25rem;
+    padding: 0;
+    list-style: none;
+    color: var(--color-text);
+}
+
+.estimate-summary ul li::before {
+    content: "✔";
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+}
+
+/* ▼ バッジ表示 */
+.estimate-badge {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+}
+
+/* 特定商取引法ページ */
+.legal{
+  margin-top: 90px;
+  padding: 4rem 0;
+  max-width: 650px;
+}
+.legal h1,
+.legal h2{
+  margin-bottom: 1rem;
+}
+.legal dt,
+.legal dd{
+  margin-bottom: 1rem;
+}
+.legal dd{
+  padding-left: 3rem;
+}
+
+/* サンクスページ *//* 404ページ */
+.thanks-page,
+.error-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-bg-alt);
+  color: var(--color-text);
+  text-align: center;
+  padding: 2rem;
+}
+.thanks-page h1,
+.error-page  {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  }
+.thanks-page p,
+.error-page  {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+}
+.thanks-page a,
+.error-page {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.thanks-page a:hover,
+.error-page  {
+  background: var(--color-accent-hover);
+}
+

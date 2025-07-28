@@ -1,0 +1,23 @@
+@import url('variables.css');
+/* いわゆる簡易リセットＣＳＳ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6; /* ← 俺のオススメ！ */
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,li{
+  list-style: none;
+}
