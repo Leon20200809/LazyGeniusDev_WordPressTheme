@@ -49,7 +49,7 @@ add_action('wp_enqueue_scripts', 'my_single_styles');
 // MHWs狩猟笛シミュレーター用CSS・JS読み込み
 function huntinghorn_simulator_styles() {
     if (is_page('16')) {
-        wp_enqueue_style('huntinghorn-simulator-css', get_template_directory_uri() . '/css/simulator_styles.css');
+        wp_enqueue_style('huntinghorn-simulator-css', get_template_directory_uri() . '/css/simulator_style.css');
         wp_enqueue_script('huntinghorn-simulator-js', get_template_directory_uri() . '/js/simulator.js', array(), '1.0.0', true);
     }
 }
