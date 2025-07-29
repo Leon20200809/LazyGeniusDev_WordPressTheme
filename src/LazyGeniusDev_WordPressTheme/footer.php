@@ -1,6 +1,7 @@
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; <?= date('Y'); ?> Lazy Genius. Procrastination isn’t failure, it’s strategy. ―「先延ばしは敗北じゃない。戦略だ。」</p>
+            <p>&copy; <?= date('Y'); ?> <em>Automate through laziness, accelerate through impatience, safeguard quality through pride.</em><br>
+    ―「怠惰で仕組み化し、短気で高速化し、傲慢で品質を守ります。」</p>
         </div>
     </footer>
     
