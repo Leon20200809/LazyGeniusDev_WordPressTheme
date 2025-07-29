@@ -26,7 +26,7 @@
             $weapon[$header] = $row[$i];
         }
 
-        // 入れ物に追加していく（どんどん並べる）
+        // 配列に追加していく
         $weapons_data[] = $weapon;
     }
 

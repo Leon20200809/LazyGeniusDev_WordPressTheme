@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
 
     const theme_uri = themeData.theme_uri;
 
-    fetch('/wp-content/themes/my-portfolio-themeV2/weapons.php')
+    fetch('/wp-content/themes/LazyGeniusDev_WordPressTheme/weapons.php')
         .then(res => res.json())
         .then(data => {
             weapon_data = data;
