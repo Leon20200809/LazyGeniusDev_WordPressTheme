@@ -46,6 +46,15 @@ function my_single_styles() {
 }
 add_action('wp_enqueue_scripts', 'my_single_styles');
 
+// MHWs狩猟笛シミュレーター用CSS・JS読み込み
+function huntinghorn_simulator_styles() {
+    if (is_page('16')) {
+        wp_enqueue_style('huntinghorn-simulator-css', get_template_directory_uri() . '/css/simulator_styles.css');
+        wp_enqueue_script('huntinghorn-simulator-js', get_template_directory_uri() . '/js/simulator.js', array(), '1.0.0', true);
+    }
+}
+add_action('wp_enqueue_scripts', 'huntinghorn_simulator_styles');
+
     // サーチフォームで記事だけ検索対象にする。（固定ページは除外）
     function restrict_search_to_posts($query){
         if ($query->is_main_query() && $query->is_search() && !is_admin()) {
