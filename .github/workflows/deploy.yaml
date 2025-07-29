@@ -32,5 +32,5 @@ jobs:
         
         echo "🔄 テーマフォルダをrsyncで転送します"
         rsync -avz -e "ssh -p 10022" \
-          ./src/LazyGeniusDev_WordPlessTheme/ \
-          xs227617@sv16485.xserver.jp:/home/xs227617/lazygenius.dev/public_html/wp-content/themes/LazyGeniusDev_WordPlessTheme
+          ./src/LazyGeniusDev_WordPressTheme/ \
+          xs227617@sv16485.xserver.jp:/home/xs227617/lazygenius.dev/public_html/wp-content/themes/LazyGeniusDev_WordPressTheme
